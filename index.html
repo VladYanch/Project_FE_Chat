@@ -23,22 +23,26 @@
             top: 0;
             left: 0;
             height: 100%;
-            width: 300px;
+            width: 180px;
             background: #f1f1f1;
-            /* display: flex; */
+            display: flex;
             flex-direction: column;
             align-items: center;
             /* justify-content: space-between; */
-            padding: 20px 0 40px 0;
+            padding: 20px 0;
             block-size: border-box;
-            width: 250px;
+        }
+
+
+        .menu__list-item {
+            text-decoration: none;
         }
 
         .nav {
             padding-bottom: 20px;
         }
 
-        .nav__item {
+        .link {
             list-style: none;
         }
 
@@ -52,6 +56,7 @@
         }
 
         .button {
+            margin-top: 8rem;
             border: none;
             background: none;
             font-size: 1.1rem;
@@ -62,29 +67,73 @@
             cursor: pointer;
         }
 
-        main {
-            margin-left: 250px;
-            padding: 2rem;
-        }
 
-        @media (max-width: 768px) {
+        /* @media (max-width: 768px) {
             .menu {
                 display: none;
             }
-        }
+        } */
 
         main {
+            width: 50%;
+            height: 100%;
+            /* width: 500px; */
             margin: 0;
+            margin-left: 15rem;
+            border-right: 1px solid black;
         }
+
+        .person {
+            margin: 0;
+            display: flex;
+            /* justify-content: space-between; */
+        }
+
+
+
+        .head {
+            margin: 0;
+            margin-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .head__title {
+            font-size: 30px;
+        }
+
+        .head__text {
+            font-size: 12px;
+            margin-right: 2rem;
+        }
+
+        .menu__site {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            text-decoration: none;
+        }
+
+        .area {
+            width: 100%;
+            height: 100%;
+            /* height: 350px; */
+            /* background: url(../image/area.png); */
+            background: url();
+            /* background-repeat: no-repeat; */
+            background-position: center;
+        }
+
     </style>
 
 </head>
 
 <body>
     <aside class="menu">
-        <h3 class="logo">memo</h3>
+        <h2 class="logo">memo</h2>
+
         <nav class="nav">
-            <ul class="nav__list">
+            <ul class="nav__list link">
                 <li class="nav__item">
                     <a href="" class="nav__item">
                         <span class="nav__icon">
@@ -98,9 +147,7 @@
 
                 <li class="nav__item">
                     <a href="" class="nav__item">
-                        <span class="nav__icon">
-
-                        </span>
+                        <img src="https://img.icons8.com/android/24/000000/login-rounded.png" />
                         <span class="nav__text">
                             Payment
                         </span>
@@ -110,7 +157,7 @@
                 <li class="nav__item">
                     <a href="" class="nav__item">
                         <span class="nav__icon">
-
+                            <img src="https://img.icons8.com/material-outlined/24/000000/chat--v1.png" />
                         </span>
                         <span class="nav__text">
                             Chat
@@ -121,10 +168,10 @@
                 <li class="nav__item">
                     <a href="" class="nav__item">
                         <span class="nav__icon">
-
+                            <img src="https://img.icons8.com/ios-glyphs/30/000000/group-foreground-selected.png" />
                         </span>
                         <span class="nav__text">
-                            Chat
+                            Group
                         </span>
                     </a>
                 </li>
@@ -132,7 +179,7 @@
                 <li class="nav__item">
                     <a href="" class="nav__item">
                         <span class="nav__icon">
-
+                            <img src="https://img.icons8.com/small/16/000000/student-registration.png" />
                         </span>
                         <span class="nav__text">
                             Students
@@ -143,7 +190,7 @@
                 <li class="nav__item">
                     <a href="" class="nav__item">
                         <span class="nav__icon">
-
+                            <img src="https://img.icons8.com/material-outlined/24/000000/customer-support.png" />
                         </span>
                         <span class="nav__text">
                             Support
@@ -163,13 +210,37 @@
     </aside>
 
     <main>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam officia eius omnis quisquam quis in velit
-            facere delectus at dolore?
-        </p>
+
+        <section class="person">
+
+            <img class="logo" src="#" alt="Logo">
+            
+            <div class="name">
+                <h3 class="person__title">Leslie Aleksander</h3>
+                <p class="person__text">Los Angeles, CA</>
+            </div>
+
+            <div class="search"></div>
+                <input type="text" placeholder="search">
+                <button class="header__button"></button>
+            </div>
+
+        </section>
+
+        <div class="head">
+            <span class="head__title">Courses</span>
+            <span class="head__text">see all</span>
+        </div>
+
+
+        <ul class="menu__site list">
+            <li><a href="#" class="menu-list-item link">All</a></li>
+            <li><a href="#" class="menu-list-item link">Current</a></li>
+            <li><a href="#" class="menu-list-item link">Pending</a></li>
+            <li><a href="#" class="menu-list-item link">Complited</a></li>
+        </ul>
+
     </main>
-
-    <body>
-
-    </body>
+</body>
 
 </html>
