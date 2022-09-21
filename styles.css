@@ -11,6 +11,12 @@ body {
     margin: 0;
 }
 
+aside {
+    position: absolute;
+    top: 0;
+    
+}
+
 ul {
     margin: 0;
     padding: 0;
