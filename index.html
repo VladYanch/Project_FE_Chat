@@ -18,6 +18,15 @@
             margin: 0;
         }
 
+        ul {
+            margin: 0;
+            padding: 0;
+            color:black;
+
+        }
+
+        
+
         .menu {
             position: fixed;
             top: 0;
@@ -39,24 +48,38 @@
         }
 
         .nav {
+            padding-top: 40px;
             padding-bottom: 20px;
+            padding-left: 0;
+
         }
 
         .link {
             list-style: none;
         }
 
+        .nav__item {
+            text-decoration: none;
+        }
+
+        .logo {
+            font-size: 2rem;
+        }
+
         .nav__item:not(:last-child) {
             margin-bottom: 30px;
-
         }
 
         nav__list {
             padding: 0;
         }
 
+        .nav__icon {
+            margin-right: .5rem;
+        }
+
         .button {
-            margin-top: 8rem;
+            margin-top: 12rem;
             border: none;
             background: none;
             font-size: 1.1rem;
@@ -124,13 +147,91 @@
             background-position: center;
         }
 
+        .calendar {
+            width: 350px;
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .calendar__item {
+            width: calc(100%/7);
+            aspect-ratio: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .calendar__item--small {
+            font-size: 0, 75 rem;
+        }
+
+        .calendar__item--grey {
+            color: rgb(194, 194, 194);
+        }
+
+        .calendar__item--active {
+            background: #000;
+            color: #fff;
+        }
+
+        .calendar__item:not(.calendar__item--small):hover {
+            background: rgb(198, 194, 194);
+            cursor: pointer;
+        }
+
+        .timeline {
+            margin-top: 1rem;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .timeline__line {
+            height: 1px;
+            background: lightgray;
+            width: 80%;
+        }
+
+        .timeline__item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .lesson {
+            width: 75%;
+            height: 40px;
+            background: rgb(95, 134, 173);
+            position: absolute;
+            left: 20%;
+        }
+
+        .lesson--930h {
+            top: calc(100%/17 *1);
+        }
+
+        li {
+            list-style: none;
+            color:black;
+        }
     </style>
 
 </head>
 
 <body>
     <aside class="menu">
-        <h2 class="logo">memo</h2>
+        <div class="logo">
+            <span class="nav__icon">
+                <i class="las la-university"></i>
+            </span>
+            <span class="nav__text">
+                memo
+            </span>
+        </div>
 
         <nav class="nav">
             <ul class="nav__list link">
@@ -147,7 +248,9 @@
 
                 <li class="nav__item">
                     <a href="" class="nav__item">
-                        <img src="https://img.icons8.com/android/24/000000/login-rounded.png" />
+                        <span class="nav__icon">
+                            <i class="las la-credit-card"></i>
+                        </span>
                         <span class="nav__text">
                             Payment
                         </span>
@@ -157,7 +260,7 @@
                 <li class="nav__item">
                     <a href="" class="nav__item">
                         <span class="nav__icon">
-                            <img src="https://img.icons8.com/material-outlined/24/000000/chat--v1.png" />
+                            <i class="lab la-rocketchat"></i>
                         </span>
                         <span class="nav__text">
                             Chat
@@ -168,7 +271,7 @@
                 <li class="nav__item">
                     <a href="" class="nav__item">
                         <span class="nav__icon">
-                            <img src="https://img.icons8.com/ios-glyphs/30/000000/group-foreground-selected.png" />
+                            <i class="las la-user-friends"></i>
                         </span>
                         <span class="nav__text">
                             Group
@@ -179,7 +282,7 @@
                 <li class="nav__item">
                     <a href="" class="nav__item">
                         <span class="nav__icon">
-                            <img src="https://img.icons8.com/small/16/000000/student-registration.png" />
+                            <i class="las la-user-graduate"></i>
                         </span>
                         <span class="nav__text">
                             Students
@@ -190,7 +293,7 @@
                 <li class="nav__item">
                     <a href="" class="nav__item">
                         <span class="nav__icon">
-                            <img src="https://img.icons8.com/material-outlined/24/000000/customer-support.png" />
+                            <i class="las la-headset"></i>
                         </span>
                         <span class="nav__text">
                             Support
@@ -214,22 +317,22 @@
         <section class="person">
 
             <img class="logo" src="#" alt="Logo">
-            
+
             <div class="name">
                 <h3 class="person__title">Leslie Aleksander</h3>
                 <p class="person__text">Los Angeles, CA</>
             </div>
 
             <div class="search"></div>
-                <input type="text" placeholder="search">
-                <button class="header__button"></button>
+            <input type="text" placeholder="search">
+            <button class="header__button"></button>
             </div>
 
         </section>
 
         <div class="head">
             <span class="head__title">Courses</span>
-            <span class="head__text">see all</span>
+            <button class="button_see">see all</button>
         </div>
 
 
@@ -240,6 +343,102 @@
             <li><a href="#" class="menu-list-item link">Complited</a></li>
         </ul>
 
+        <section>
+            <h2>Schedule</h2>
+
+            <ul class="calendar">
+                <li class="calendar__item calendar__item--small">San</li>
+                <li class="calendar__item calendar__item--small">Mon</li>
+                <li class="calendar__item calendar__item--small">Tue</li>
+                <li class="calendar__item calendar__item--small">Wed</li>
+                <li class="calendar__item calendar__item--small">Thu</li>
+                <li class="calendar__item calendar__item--small">Fri</li>
+                <li class="calendar__item calendar__item--small">Sat</li>
+                <li class="calendar__item calendar__item--grey">26</li>
+                <li class="calendar__item calendar__item--grey">27</li>
+                <li class="calendar__item calendar__item--grey">28</li>
+                <li class="calendar__item calendar__item--grey">29</li>
+                <li class="calendar__item calendar__item--grey">30</li>
+                <li class="calendar__item">1</li>
+                <li class="calendar__item">2</li>
+                <li class="calendar__item">3</li>
+                <li class="calendar__item">4</li>
+                <li class="calendar__item">5</li>
+                <li class="calendar__item">6</li>
+                <li class="calendar__item">7</li>
+                <li class="calendar__item">8</li>
+                <li class="calendar__item">9</li>
+                <li class="calendar__item">10</li>
+                <li class="calendar__item">11</li>
+                <li class="calendar__item">12</li>
+                <li class="calendar__item">13</li>
+                <li class="calendar__item">14</li>
+                <li class="calendar__item">15</li>
+                <li class="calendar__item">16</li>
+                <li class="calendar__item">17</li>
+                <li class="calendar__item">18</li>
+                <li class="calendar__item">19</li>
+                <li class="calendar__item calendar__item--active">20</li>
+                <li class="calendar__item">21</li>
+                <li class="calendar__item">22</li>
+                <li class="calendar__item">23</li>
+                <li class="calendar__item">24</li>
+                <li class="calendar__item">25</li>
+                <li class="calendar__item">26</li>
+                <li class="calendar__item">27</li>
+                <li class="calendar__item">28</li>
+                <li class="calendar__item">29</li>
+                <li class="calendar__item">30</li>
+            </ul>
+
+            <div class="upcoming__header">
+                <h3 class="upcoming__title">Upcoming</h3>
+                <button class="button_dot">...</button>
+            </div>
+
+            <div class="timeline">
+
+                <div class="lesson lesson--930h"></div>
+
+                <div class="timeline__item">
+                    <div class="timeline__time">09:00</div>
+                    <div class="timeline__line"></div>
+                </div>
+
+                <div class="timeline__item">
+                    <div class="timeline__time">10:00</div>
+                    <div class="timeline__line"></div>
+                </div>
+                <div class="timeline__item">
+                    <div class="timeline__time">11:00</div>
+                    <div class="timeline__line"></div>
+                </div>
+                <div class="timeline__item">
+                    <div class="timeline__time">12:00</div>
+                    <div class="timeline__line"></div>
+                </div>
+                <div class="timeline__item">
+                    <div class="timeline__time">13:00</div>
+                    <div class="timeline__line"></div>
+                </div>
+                <div class="timeline__item">
+                    <div class="timeline__time">14:00</div>
+                    <div class="timeline__line"></div>
+                </div>
+                <div class="timeline__item">
+                    <div class="timeline__time">15:00</div>
+                    <div class="timeline__line"></div>
+                </div>
+                <div class="timeline__item">
+                    <div class="timeline__time">16:00</div>
+                    <div class="timeline__line"></div>
+                </div>
+                <div class="timeline__item">
+                    <div class="timeline__time">17:00</div>
+                    <div class="timeline__line"></div>
+                </div>
+            </div>
+        </section>
     </main>
 </body>
 
