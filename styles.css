@@ -1,27 +1,48 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+:root {
+    --light-gray: #dddddd;
+    --gray-text: #d8d6d6;
+    --dark-gray: #717173;
+    --dark-text: #343336;
+}
 
-* {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* { /* all */
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-
-body {
-    font-family: "Roboto", sans-serif;
-    margin: 0;
+html,
+body,
+main,
+aside,
+.inbox,
+.chat,
+.panel {
+    height: 100%;
 }
+body {
+    font-family: 'Roboto', sans-serif;
 
+}
 aside {
     position: absolute;
     top: 0;
-    
+    left: 0;
+    background: lightgrey;
+    width: 200px;
+}
+
+/*       Asside       */
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
 }
 
 ul {
     margin: 0;
     padding: 0;
-    color:black;
-}       
+}
 
 .menu {
     position: fixed;
@@ -32,37 +53,30 @@ ul {
     background: #f1f1f1;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-between;
-    padding: 20px 0;
+    padding: 20px 20px;
     box-sizing: border-box;
 }
 
-.menu__list-item {
-    text-decoration: none;
-}
-
 .nav {
-    /* padding-top: 40px; */
-    /* padding-bottom: 20px; */
     padding-left: 0;
 }
 
-.link {
+.list {
     list-style: none;
 }
 
-.nav__item {
-    text-decoration: none;
+.link {
+    text-decoration: none;  
 }
 
-.logo {
-    font-size: 2rem;
+.nav__text, .nav__icon {
+    color: black;
 }
 
 .nav__item:not(:last-child) {
-    margin-bottom: 30px;
-}
+    margin-bottom: 20px;
+} 
 
 nav__list {
     padding: 0;
@@ -72,140 +86,249 @@ nav__list {
     margin-right: .5rem;
 }
 
+.projects_title {
+    color: var(--dark-gray);
+    text-transform: uppercase;
+    font-size: .6rem;
+}
+
+.projects__item {
+    display: flex;
+    font-size: 0.8rem;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+/* .projects__item {
+    margin-bottom: 20px
+} */
+
+.projects__item-link {
+    color: black;
+}
+
+.projects__item:not(:last-child) {
+    margin-bottom: 20px
+}
+
+.projects__item-icon, .projects__item-count {
+    width: 20px;
+    height: 20px;
+    border-radius: 30%;
+}
+
+.projects__item-icon--red {
+    border: 1px solid red;
+}
+
+.projects__item-icon--blue {
+    border: 1px solid blue;
+}
+
+.projects__item-icon--violet {
+    border: 1px solid violet;
+}
+
+.projects__item-icon--green {
+    border: 1px solid green;
+}
+
+.projects__item-link {
+    margin-right: auto;
+}
+
+.projects__item-count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .6rem;
+    background: var(--light-gray);
+}
+
 .button {
-    border: none;
+    border: 1px solid var(--light-gray);
     background: none;
-    font-size: 1.1rem;
-    color: grey;
+    font-size: .6rem;
+    font-weight: 600;
+    color: var(--dark-text);
+    padding: 5px 5px;
+    border-radius: 6px;
 }
 
 .button:hover {
     cursor: pointer;
 }
 
-/* @media (max-width: 768px) {
-    .menu {
-        display: none;
-    }
-} */
-
+/*      Inbox header       */
+.inbox {
+    border-right: 1px solid grey;
+    width: 250px;
+    padding: 20px 20px 0 20px;
+}
 main {
-    width: 50%;
-    height: 100%;
-    /* width: 500px; */
+    position: absolute;
+    top: 0;
+    left: 200px;
+    width: calc(100% - 200px);
     display: flex;
-    margin: 0;
-    margin-left: 15rem;
-    border-right: 1px solid black;
 }
+.chat {
+    border-right: 1px solid grey;
+    width: calc(100% - 250px - 50px);
 
-.hero {
-    margin: 0;
-    display: flex;
-    /* justify-content: space-between; */
-}
-
-.head {
-    margin: 0;
-    margin-top: 2rem;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+}
+.panel {
+    width: 50px;
+}
+.chat-item {
+    height: 80px;
+    background: blue;
+    /* надо поправить, чтобы отступ был у всех кроме последнего */
+    margin-bottom: 1rem;
+}
+.container,
+.messages {
+    overflow-y: scroll;
+    /* надо поправить, видимо сделать через calc(), чтобы все было идеально */
+    height: 90%;
+}
+.container::-webkit-scrollbar,
+.messages::-webkit-scrollbar {
+    display: none;
+}
+.chat-top,
+.chat-bottom  {
+    height: 60px;
+    background: grey;
+}
+.message {
+    height: 20px;
+    background: blue;
+    margin-bottom: 1rem;
 }
 
-.head__title {
-    font-size: 30px;
+.inbox__button {
+    background: none;
+    border: 2px solid var(--light-gray);
+    border-radius: 6px;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
 }
 
-.head__text {
-    font-size: 12px;
-    margin-right: 2rem;
+.inbox__button:hover {
+    cursor: pointer;
+    opacity: 0.6;
 }
 
-.menu__site {
+.inbox__title-wrp {
     display: flex;
-    list-style: none;
-    gap: 30px;
-    text-decoration: none;
-}
-
-.area {
-    width: 100%;
-    height: 100%;
-    /* height: 350px; */
-    /* background: url(../image/area.png); */
-    background: url();
-    /* background-repeat: no-repeat; */
-    background-position: center;
-}
-
-.calendar {
-    width: 350px;
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.calendar__item {
-    width: calc(100%/7);
-    aspect-ratio: 1;
-    display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
     align-items: center;
 }
 
-.calendar__item--small {
-    font-size: 0, 75 rem;
-}
-
-.calendar__item--grey {
-    color: rgb(194, 194, 194);
-}
-
-.calendar__item--active {
-    background: #000;
-    color: #fff;
-}
-
-.calendar__item:not(.calendar__item--small):hover {
-    background: rgb(198, 194, 194);
-    cursor: pointer;
-}
-
-.timeline {
-    margin-top: 1rem;
-    height: 600px;
+.inbox__switcher {
     display: flex;
-    flex-direction: column;
+    background: var(--light-gray);
+    padding: 5px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.inbox__switcher-button {
+    width: 50%;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 0;
+    background: transparent;
+    color: var(--dark-gray);
+}
+
+.inbox__switcher-button--active {
+    background: white;
+    color: var(--dark-text);
+}
+
+.person {
+}
+.person__item {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.person__avatar {
     position: relative;
 }
 
-.timeline__line {
-    height: 1px;
-    background: lightgray;
-    width: 80%;
+.person__avatar-pic {
+    /* position: relative; */
+    width: 46px;
+    height: 46px;
+    background: gray;
+    border-radius: 10px;
 }
-
-.timeline__item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.lesson {
-    width: 75%;
-    height: 40px;
-    background: rgb(95, 134, 173);
+.person__online {
     position: absolute;
-    left: 20%;
+    background-color: rgb(31, 233, 31);
+    width: 10px;
+    height: 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+
+    /* top: 190px;
+    left: 62px; */
 }
 
-.lesson--930h {
-    top: calc(100%/17 *1);
+.person__header  {
+    font-size: .8rem;
+    margin-bottom: 3px;
+}
+.person__role {
+    font-size: .7rem;
+    color: var(--dark-gray);
+    margin-bottom: 3px;
+
+}
+.person__message {
+    font-size: .7rem;
 }
 
-li {
-    list-style: none;
-    color:black;
+.person__count {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    color: white;
+    font-size: 0.8rem;
+    background-color: blue;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.person__item--active {
+    background: var(--light-gray);
+    border-radius: 10px;
+    padding: 7px;
+}
+
+.person__avatar--yellow {
+    background: rgb(255, 174, 34);
+}
+
+.person__item--offline .person__online, .person__item--not-active .person__count{
+    display: none;
+}
+
+.person__item--not-active .person__item {
+    justify-content: start;
+    margin-left: 15px;
 }

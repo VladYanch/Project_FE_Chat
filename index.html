@@ -9,25 +9,26 @@
     <link rel="stylesheet"
         href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="script.js">
 </head>
 
 <body>
     <aside class="menu">
         <div class="logo">
-            <span class="nav__icon">
+            <span class="logo__icon">
                 <i class="las la-university"></i>
             </span>
-            <span class="nav__text">
+            <span class="logo__text">
                 Shark
             </span>
         </div>
 
         <nav class="nav">
-            <ul class="nav__list link">
+            <ul class="nav__list list">
                 <li class="nav__item">
-                    <a href="" class="nav__item">
+                    <a href="" class="nav__link link">
                         <span class="nav__icon">
-                            <i class="lab la-discourse"></i>
+                            <i class="las la-chart-pie"></i>
                         </span>
                         <span class="nav__text">
                             Dashboard
@@ -36,9 +37,9 @@
                 </li>
 
                 <li class="nav__item">
-                    <a href="" class="nav__item">
+                    <a href="" class="nav__link link">
                         <span class="nav__icon">
-                            <i class="las la-credit-card"></i>
+                            <i class="las la-chart-area"></i>
                         </span>
                         <span class="nav__text">
                             Statistic
@@ -47,9 +48,9 @@
                 </li>
 
                 <li class="nav__item">
-                    <a href="" class="nav__item">
+                    <a href="" class="nav__link link">
                         <span class="nav__icon">
-                            <i class="lab la-rocketchat"></i>
+                            <i class="las la-headset"></i>
                         </span>
                         <span class="nav__text">
                             Support
@@ -58,9 +59,9 @@
                 </li>
 
                 <li class="nav__item">
-                    <a href="" class="nav__item">
+                    <a href="" class="nav__link link">
                         <span class="nav__icon">
-                            <i class="las la-user-friends"></i>
+                            <i class="las la-inbox"></i>
                         </span>
                         <span class="nav__text">
                             Inbox
@@ -69,9 +70,9 @@
                 </li>
 
                 <li class="nav__item">
-                    <a href="" class="nav__item">
+                    <a href="" class="nav__link link">
                         <span class="nav__icon">
-                            <i class="las la-user-graduate"></i>
+                            <i class="las la-bullseye"></i>
                         </span>
                         <span class="nav__text">
                             Goals
@@ -80,9 +81,9 @@
                 </li>
 
                 <li class="nav__item">
-                    <a href="" class="nav__item">
+                    <a href="" class="nav__link link">
                         <span class="nav__icon">
-                            <i class="las la-headset"></i>
+                            <i class="las la-link"></i>
                         </span>
                         <span class="nav__text">
                             Links
@@ -92,161 +93,163 @@
             </ul>
         </nav>
 
-        <button class="button">
-            <span class="icon">
-                <i class="las la-sign-out-alt"></i>
-            </span>
-            Log out
-        </button>
+        <p class="projects_title">projects</p>
+        <ul class="projects list link">
+            <li class="projects__item link">
+                <div class="projects__item-icon projects__item-icon--red"></div>
+                <a href="#" class="projects__item-link link">Callipso</a>
+                <div class="projects__item-count">+4</div>
+            </li>
+            <li class="projects__item link">
+                <div class="projects__item-icon projects__item-icon--blue"></div>
+                <a href="#" class="projects__item-link link">BWS bank</a>
+                <div class="projects__item-count">+5</div>
+            </li>
+            <li class="projects__item link">
+                <div class="projects__item-icon projects__item-icon--violet"></div>
+                <a href="#" class="projects__item-link link">Unicorn app</a>
+                <div class="projects__item-count">+1</div>
+            </li>
+            <li class="projects__item link">
+                <div class="projects__item-icon projects__item-icon--green"></div>
+                <a href="#" class="projects__item-link link">Salt</a>
+                <div class="projects__item-count">+3</div>
+            </li>
+        </ul>
 
+        <button class="button">
+            Show more
+        </button>
     </aside>
 
     <main>
-
-        <section class="hero">
-            <img class="logo" src="#" alt="Logo">
-
-            <div class="name">
-                <h3 class="person__title">Leslie Aleksander</h3>
-                <p class="person__text">Los Angeles, CA</>
+        <div class="inbox">
+            <div class="inbox__title-wrp">
+                <h2 class="inbox__title">Inbox</h2>
+                <button class="inbox__button" type="button"><i class="las la-plus"></i></button>
             </div>
 
-            <div class="search"></div>
-            <input type="text" placeholder="search">
-            <button class="header__button"></button>
+            <div class="inbox__switcher">
+                <button class="inbox__switcher-button inbox__switcher-button--active" id="general-btn">General</button>
+                <button class="inbox__switcher-button" id="total-btn">Total</button>
             </div>
 
+            <div class="person">
+                <div class="person__item person__item--online person__item--active">
+                    <div class="person__avatar">
+                        <img class="person__avatar-pic" src="./images/Michal.png"></img>
+                    </div>
+                    <div class="person__online"></div>
 
-            <div class="head">
-                <span class="head__title">Courses</span>
-                <button class="button_see">see all</button>
-            </div>
-
-            <ul class="menu__site list">
-                <li><a href="#" class="menu-list-item link">Dashboard</a></li>
-                <li><a href="#" class="menu-list-item link">Statistic</a></li>
-                <li><a href="#" class="menu-list-item link">Support</a></li>
-                <li><a href="#" class="menu-list-item link">Inbox</a></li>
-                <li><a href="#" class="menu-list-item link">Goals</a></li>
-                <li><a href="#" class="menu-list-item link">Links</a></li>                
-            </ul>
-
-            <ul class="menu__site list">
-                <li>
-                    <a href="#" class="menu-list-item link">Callipso</a>
-
-                </li>
-                <li><a href="#" class="menu-list-item link">BWS bank</a></li>
-                <li><a href="#" class="menu-list-item link">Unicorn app</a></li>
-                <li><a href="#" class="menu-list-item link">Salt</a></li>
-            </ul>
-
-            <button class="button">
-                Show more
-            </button>
-        </section>
-
-
-        <div class="right">
-            <section class="section-calendar">
-                <h2>Schedule</h2>
-
-                <ul class="calendar">
-                    <li class="calendar__item calendar__item--small">San</li>
-                    <li class="calendar__item calendar__item--small">Mon</li>
-                    <li class="calendar__item calendar__item--small">Tue</li>
-                    <li class="calendar__item calendar__item--small">Wed</li>
-                    <li class="calendar__item calendar__item--small">Thu</li>
-                    <li class="calendar__item calendar__item--small">Fri</li>
-                    <li class="calendar__item calendar__item--small">Sat</li>
-                    <li class="calendar__item calendar__item--grey">26</li>
-                    <li class="calendar__item calendar__item--grey">27</li>
-                    <li class="calendar__item calendar__item--grey">28</li>
-                    <li class="calendar__item calendar__item--grey">29</li>
-                    <li class="calendar__item calendar__item--grey">30</li>
-                    <li class="calendar__item">1</li>
-                    <li class="calendar__item">2</li>
-                    <li class="calendar__item">3</li>
-                    <li class="calendar__item">4</li>
-                    <li class="calendar__item">5</li>
-                    <li class="calendar__item">6</li>
-                    <li class="calendar__item">7</li>
-                    <li class="calendar__item">8</li>
-                    <li class="calendar__item">9</li>
-                    <li class="calendar__item">10</li>
-                    <li class="calendar__item">11</li>
-                    <li class="calendar__item">12</li>
-                    <li class="calendar__item">13</li>
-                    <li class="calendar__item">14</li>
-                    <li class="calendar__item">15</li>
-                    <li class="calendar__item">16</li>
-                    <li class="calendar__item">17</li>
-                    <li class="calendar__item">18</li>
-                    <li class="calendar__item">19</li>
-                    <li class="calendar__item calendar__item--active">20</li>
-                    <li class="calendar__item">21</li>
-                    <li class="calendar__item">22</li>
-                    <li class="calendar__item">23</li>
-                    <li class="calendar__item">24</li>
-                    <li class="calendar__item">25</li>
-                    <li class="calendar__item">26</li>
-                    <li class="calendar__item">27</li>
-                    <li class="calendar__item">28</li>
-                    <li class="calendar__item">29</li>
-                    <li class="calendar__item">30</li>
-                </ul>
-
-                <div class="upcoming__header">
-                    <h3 class="upcoming__title">Upcoming</h3>
-                    <button class="button_dot">...</button>
+                    <div class="person__column">
+                        <h3 class="person__header">Michael.B</h3>
+                        <p class="person__role">Project manager</p>
+                        <p class="person__message">Sent you the file</p>
+                    </div>
+                    <div class="person__count">2</div>                    
                 </div>
-            </section>
-            <section class="schedule">
-                <div class="timeline">
 
-                    <div class="lesson lesson--930h"></div>
+                <div class="person__item person__item--online person__item--active">
+                    <div class="person__avatar">
+                        <img class="person__avatar-pic" src="./images/Katie.png"></img>
+                    </div>
+                    <div class="person__online"></div>
 
-                    <div class="timeline__item">
-                        <div class="timeline__time">09:00</div>
-                        <div class="timeline__line"></div>
+                    <div class="person__column ">
+                        <h3 class="person__header">Katie.W</h3>
+                        <p class="person__role">Middle designer</p>
+                        <p class="person__message">See you tommorow</p>
                     </div>
-
-                    <div class="timeline__item">
-                        <div class="timeline__time">10:00</div>
-                        <div class="timeline__line"></div>
-                    </div>
-                    <div class="timeline__item">
-                        <div class="timeline__time">11:00</div>
-                        <div class="timeline__line"></div>
-                    </div>
-                    <div class="timeline__item">
-                        <div class="timeline__time">12:00</div>
-                        <div class="timeline__line"></div>
-                    </div>
-                    <div class="timeline__item">
-                        <div class="timeline__time">13:00</div>
-                        <div class="timeline__line"></div>
-                    </div>
-                    <div class="timeline__item">
-                        <div class="timeline__time">14:00</div>
-                        <div class="timeline__line"></div>
-                    </div>
-                    <div class="timeline__item">
-                        <div class="timeline__time">15:00</div>
-                        <div class="timeline__line"></div>
-                    </div>
-                    <div class="timeline__item">
-                        <div class="timeline__time">16:00</div>
-                        <div class="timeline__line"></div>
-                    </div>
-                    <div class="timeline__item">
-                        <div class="timeline__time">17:00</div>
-                        <div class="timeline__line"></div>
-                    </div>
+                    <div class="person__count">3</div>                    
                 </div>
-            </section>
+
+                <div class="person__item person__item--offline person__item--not-active">
+                    <div class="person__avatar">
+                        <img class="person__avatar-pic" src="./images/Arnold.png"></img>
+                        <div class="person__online"></div>
+                    </div>
+                    <div class="person__column">
+                        <h3 class="person__header">Arnold.J</h3>
+                        <p class="person__role">UI designer</p>
+                        <p class="person__message">Hi i checked layout agai.</p>
+                    </div>
+                    <div class="person__count"></div>                    
+                </div>
+
+                <div class="person__item person__item--online person__item--not-active">
+                    <div class="person__avatar">
+                        <img class="person__avatar-pic person__avatar--yellow" src="./images/Fannie.png"></img>
+                    </div>
+                    <div class="person__online"></div>
+
+                    <div class="person__column">
+                        <h3 class="person__header">Fannie. K</h3>
+                        <p class="person__role">HR manager</p>
+                        <p class="person__message">okey!</p>
+                    </div>
+                    <div class="person__count">3</div>                    
+                </div>
+
+                <!-- <div class="person__item"></div>
+                <div class="person__item"></div>
+                <div class="person__item"></div>
+                <div class="person__item"></div>
+                <div class="person__item"></div> -->
+            </div>
         </div>
+
+        <div class="chat">
+            <div class="chat-top"></div>
+
+            <div class="messages">
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+                <div class="message"></div>
+            </div>
+
+            <div class="chat-bottom"></div>
+        </div>
+
+        <div class="panel"></div>
     </main>
+    <script src="script.js"></script>
 </body>
 
 </html>
