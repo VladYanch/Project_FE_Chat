@@ -56,7 +56,7 @@
                     </a>
                 </li>
 
-                <li class="nav__item">
+                <li class="nav__item current">
                     <a href="" class="nav__link link">
                         <span class="nav__icon">
                             <i class="las la-inbox"></i>
@@ -92,7 +92,7 @@
         </nav>
 
         <p class="projects_title">projects</p>
-        <ul class="projects list link">
+        <ul class="projects__list link">
             <li class="projects__item link">
                 <div class="projects__item-icon projects__item-icon--red"></div>
                 <a href="#" class="projects__item-link link">Callipso</a>
@@ -115,13 +115,13 @@
             </li>
         </ul>
 
-        <button class="button">
+        <button class="button__menu">
             Show more
         </button>
     </aside>
 
     <main>
-        <div class="inbox">
+        <section class="inbox">
             <div class="inbox__title-wrp">
                 <h2 class="inbox__title">Inbox</h2>
                 <button class="inbox__button" type="button"><i class="las la-plus"></i></button>
@@ -301,38 +301,121 @@
                     <div class="person__line"></div>
                 </li>
             </ul>
-        </div>
+        </section>
 
         <div class="chat-wrapper">
-            <div class="chat__top">
-                <figure class="chat__avatar">
-                    <img class="chat__avatar-pic" src="./images/Michal.png"></img>
-                    <div class="person__online"></div>
-                </figure>
-                <div class="chat__column">
-                    <h3 class="chat__header person__header">Michael.B</h3>
-                    <p class="chat__role person__role">Online</p>
+            <section class="chat__top">
+                <div class="chat__left">
+                    <figure class="chat__avatar">
+                        <img class="chat__avatar-pic" src="./images/Michal.png"></img>
+                        <div class="chat__online"></div>
+                    </figure>
+                    <div class="chat__column">
+                        <h3 class="chat__header person__header">Michael.B</h3>
+                        <p class="chat__role person__role">Online</p>
+                    </div>
                 </div>
-                <input type="text">
-                <button type="button">mic</button>
-                <button type="button">cam</button>
-            </div>
+                <div class="chat__right">
+                    <div class="input__wrp">
+                        <input type="text" class="chat__top-input" placeholder="Bri ">
+                        <img class="input_search" src="./images/search.png" alt="search">
+                    </div>
+                    <button type="button" class="chat__btn ">
+                        <img src="./images/mic.png" alt="mic">
+                    </button>
+                    <button type="button" class="chat__btn">
+                        <img src="./images/cam.png" alt="cam">
+                    </button>
+                </div>
+            </section>
 
-            <div class="chat__messages">
-                <div class="message"></div>
-                <div class="message"></div>
-                <div class="message"></div>
-                <div class="message"></div>
-                <div class="message"></div>
-                <div class="message"></div>
-                <div class="message"></div>
-                <div class="message"></div>
-            </div>
+            <section class="messages">
+                <ul class="messages__list list">
+                    <li class="messages__item">
+                        <div class="messages__text messages__item--light">June, 29 Tuesday</div>
+                    </li>
+                    <li class="messages__item">
+                        <div class="messages__text messages__item--right messages__item--small">12:25</div>
+                    </li>
+                    <li class="messages__item">
+                        <div class="messages__text messages__item--right">Hello!</div>
+                    </li>
+                    <li class="messages__item">
+                        <figure class="messages__sound  messages__sound--right messages__item--right">
+                            <img src="./images/play.png" alt="play">
+                            <img src="./images/sound.png" alt="sound">
+                            <span class="sound__time">00:16</span>
+                        </figure>
+                    </li>
+                    <li class="messages__item">
+                        <span class="messages__text messages__item--right messages__item--small">viewed at</span>
+                    </li>
+                    <li class="messages__item">
+                        <time class="messages__text messages__item--small">12:28</time>
+                    </li>
+                    <li class="messages__item">
+                        <div class="messages__text">Hi👋</div>
+                    </li>
+                    <li class="messages__item">
+                        <figure class="messages__sound">
+                            <img src="./images/play.png" alt="play">
+                            <img src="./images/sound.png" alt="sound">
+                            <span class="sound__time">00:08</span>
+                        </figure>
+                    </li>
+                    <li class="messages__item">
+                        <div class="messages__text messages__item--right messages__item--small">12:29</div>
+                        <!-- <time class="messages__text messages__item--right messages__item--small">12:29</time> -->
+                    </li>
+                    <li class="messages__item">
+                        <div class="messages__text messages__item--right">Okay, thank you very much for the speed</div>
+                    </li>
+                    <li class="messages__item">
+                        <div class="messages__text messages__item--right messages__item--small">viewed at</div>
+                    </li>
+                    <li class="messages__item">
+                        <time class="messages__text messages__item--small">12:30</time>
+                    </li>
+                    <li class="messages__item">
+                        <div class="messages__text">Catch 🙈</div>
+                    </li>
 
-            <div class="chat__bottom"></div>
+                    <li class="messages__item file">
+                        <div class="file__wrp">
+                            <figure class="file__pic">
+                                <img class="" src="./images/file.png"></img>
+                            </figure>
+                            <div class="file__column">
+                                <h3 class="file__header person__header">Brief.doc</h3>
+                                <p class="file__role person__role">148 KB</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="chat__bottom">
+                <input type="text" class="chat__bottom-input" placeholder="Write a message...">
+                <button type="button" class="chat__down-btn chat__btn--grey">
+                    <img src="./images/add-image.png" alt="add img">
+                </button>
+                <button type="button" class="chat__down-btn chat__btn--grey">
+                    <img src="./images/mic.png" alt="mic">
+                </button>
+                <button type="button" class="chat__down-btn chat__btn--blue">
+                    <img src="./images/send.png" alt="send">
+                </button>
+            </section>
         </div>
 
-        <div class="panel"></div>
+        <section class="panel">
+            <button type="button" class="panel__btn panel__btn--up"><i class="las la-ellipsis-h"></i></button>
+            <div class="button__down">
+                <button type="button" class="panel__btn"><i class="las la-exclamation-circle"></i></button>
+                <button type="button" class="panel__btn"><i class="las la-bell-slash"></i></buttontype>
+                    <button type="button" class="panel__btn"><i class="las la-trash"></i></button>
+            </div>
+        </section>
     </main>
     <script src="script.js"></script>
 </body>
