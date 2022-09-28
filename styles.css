@@ -574,6 +574,14 @@ nav__list {
     justify-content: right;
 }
 
+/* .file__column {
+} */
+
+.file__header {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
 /*  ----------- Panel  ----------- */
 .panel {
     position: fixed;
